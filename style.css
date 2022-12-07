@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    font-size: 0.675vw;
+    --base: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f3f3f3;
+}
+
+.img {
+    min-width: 88rem;
+    max-height: 100vh;
+    object-fit: contain;
+    flex: 6;
+}
+.link{
+    position: fixed;
+    right: 5%;
+    top: 5%;
+}
+.link button{
+    background: #4285F4;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.content {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-right: 10%;
+}
+
+.head {
+    color: #4285F4;
+    font-size: calc(6rem * var(--base));
+}
+
+.sub-head {
+    font-size: calc(2rem * var(--base));
+    margin-top: 5%;
+}
+
+.part {
+    margin-bottom: 7%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: calc(1.6rem * var(--base));
+}
+
+.text {
+    font-size: calc(1.5rem * var(--base));
+    text-align: justify;
+}
+
+.part:last-child{
+    margin-bottom: 0;
+}
+
+.right-float * {
+    color: rgb(53, 53, 53);
+}
+
+@media screen and (max-width:1024px) {
+     :root {
+        font-size: 10px;
+    }
+    .sub-head {
+        margin-bottom: 5%;
+    }
+    .img {
+        min-width: 100vw;
+    }
+    .content{
+        max-width: 800px;
+        align-self: center;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
